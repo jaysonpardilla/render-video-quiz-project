@@ -15,8 +15,5 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # Copy project
 COPY . /app/
 
-# Collect static files
-#RUN python manage.py collectstatic --noinput
-
-# Run the app using Gunicorn
-CMD ["gunicorn", "quizapi.wsgi:application", "--bind", "0.0.0.0:8000"]
+# Run migrations then start the app using Gunicorn
+CMD ["sh", "-c", "python manage.py migrate && gunicorn quizapi.wsgi:application --bind 0.0.0.0:8000"]
