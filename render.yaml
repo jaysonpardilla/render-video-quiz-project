@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: quizapi
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: quizapi.settings
+      - key: SECRET_KEY
+        value: django-insecure-5s(w+w-g!517%o_c%9gqg$q9l^$=^8n-)xdct9gbwe4&ygf#a9
+      - key: DEBUG
+        value: "False"

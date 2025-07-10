@@ -1,0 +1,11 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+env/
+venv/
+render7_venv/
+*.db
+*.log
+media/
