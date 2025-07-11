@@ -12,3 +12,6 @@ services:
       - key: DEBUG
         value: "False"
 
+volumes:
+  - name: media
+    path: /media
